@@ -24,7 +24,7 @@ function Rubber(canvasID) {
   this.canvas.css('cursor','pointer');
   this.ctx.font = '64pt Arial';
   this.ctx.textAlign = 'center';
-  this.imgFolder = 'Images/';
+  this.imgFolder = '../Images/';
   this.trackp = new Background(this, 'trackp', 'plain');
   this.tracks = new Background(this, 'tracks', 'plain');
   this.grass = new Background(this, 'grass', 'scroll');
@@ -41,7 +41,7 @@ function Background(rubber, name, state){
   this.canvasBounds = rubber.canvas[0].getBoundingClientRect();
   this.ctx = rubber.canvas[0].getContext('2d');
   this.img = document.createElement('img');
-  this.imgName = 'Images/backgroundSprite.png';
+  this.imgName = '../Images/backgroundSprite.png';
   this.name = name;
   this.img.src=this.imgName;
   this.boundingWidth = this.img.width;
